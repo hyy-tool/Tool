@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title_base"
+        layout="@layout/title_base" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_300"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1" />
+
+        <com.suke.widget.SwitchButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:sb_checked="true" />
+
+
+        <com.suke.widget.SwitchButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:sb_checked="true"
+            app:sb_show_indicator="false" />
+
+        <com.suke.widget.SwitchButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:sb_checked="true"
+            app:sb_checked_color="#fdc951" />
+
+        <com.suke.widget.SwitchButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:sb_background="#FFF"
+            app:sb_button_color="#db99c7"
+            app:sb_checked_color="#A36F95"
+            app:sb_checkline_color="#a5dc88"
+            app:sb_shadow_color="#A36F95"
+            app:sb_uncheckcircle_color="#A36F95" />
+
+        <com.suke.widget.SwitchButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:sb_enable_effect="false" />
+    </LinearLayout>
+</LinearLayout>

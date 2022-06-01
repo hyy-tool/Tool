@@ -5,7 +5,9 @@
     android:background="#fff"
     android:orientation="vertical">
 
-    <include layout="@layout/iten_base" />
+    <include
+        android:id="@+id/title_base"
+        layout="@layout/title_base" />
 
 
     <androidx.recyclerview.widget.RecyclerView

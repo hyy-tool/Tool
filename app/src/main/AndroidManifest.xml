@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.toolgather">
+    package="com.example.hytool">
     <!--网络权限-->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-            android:name=".ToolGatherApp"
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/Theme.ToolGather">
+        android:name=".ToolGatherApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HYTool">
 
         <!--适配华为（huawei）刘海屏-->
         <meta-data
-                android:name="android.notch_support"
-                android:value="true"/>
+            android:name="android.notch_support"
+            android:value="true" />
         <!--适配小米（xiaomi）刘海屏-->
         <meta-data
-                android:name="notch.config"
-                android:value="portrait|landscape"/>
-
-
-        <activity android:name=".mvp.view.activity.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+            android:name="notch.config"
+            android:value="portrait|landscape" />
 
         <activity
-                android:name=".mvp.view.MainActivity"
-                android:windowSoftInputMode="adjustPan|adjustNothing"
-                android:launchMode="singleTask"/>
-        <activity android:name=".mvp.view.activity.activity_home_v1.SvgaActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v1.ThreeDActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v1.IosButtonActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v3.txIm.ChatActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v3.txIm.TxImAnswerActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v3.txIm.ContactAvtivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v3.txIm.FriendProfileActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v3.txIm.NewFriendActivity"/>
-        <activity android:name=".mvp.view.activity.LogInActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v1.SignInActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v1.PhotographActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v1.BankCardActivity"/>
-        <activity android:name=".mvp.view.activity.activity_home_v1.RegularJudgmentActivity"/>
+            android:name="com.example.toolgather.mvp.view.activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.toolgather.mvp.view.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+
+        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.SvgaActivity" />
+        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.ThreeDActivity" />
+        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.IoswitchActivity" />
+        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.ChatActivity" />
+        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.TxImAnswerActivity" />
+        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.ContactAvtivity" />
+        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.FriendProfileActivity" />
+        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.NewFriendActivity" />
+        <activity android:name="com.example.toolgather.mvp.view.activity.LogInActivity" />
+        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.SignInActivity" />
+        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.PhotographActivity" />
+        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.BankCardActivity" />
+        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.RegularJudgmentActivity" />
 
         <!-- 微信支付 start-->
         <activity
-                android:name="com.stefan.hyyTool.wxapi.WXPayEntryActivity"
-                android:exported="true"
-                android:launchMode="singleTop"
-                android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
-
+            android:name="com.example.hyytool.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
     </application>
 

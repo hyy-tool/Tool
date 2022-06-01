@@ -1,102 +1,91 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'//kotlin  开发3
-    id 'kotlin-android-extensions'//kotlin 开发4最后一个
+    id 'kotlin-kapt'
 }
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    apply plugin: 'org.greenrobot.greendao'  //GreenDao-v2
+    compileSdk rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.toolgather"
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
+        applicationId "com.example.hytool"
+        minSdk rootProject.ext.android.minSdk
+        targetSdk rootProject.ext.android.targetSdk
+        versionCode  rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
-
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                includeCompileClasspath = true
-//            }
-//        }
-        ndk {
-            // 设置支持的SO库架构
-            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
-        }
     }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    buildFeatures {
+        viewBinding true//kotlin 开发4 最后一个
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
-    apply plugin: 'org.greenrobot.greendao'  //GreenDao-v2
+
     greendao {//GreenDao-v3
         schemaVersion 1
-    }
-    packagingOptions {
-        exclude 'META-INF/easy-adapter_release.kotlin_module'
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //框架必须依赖  start
-    implementation rootProject.ext.dependencies.dagger
-    annotationProcessor rootProject.ext.dependencies.dagger_compiler
-    implementation rootProject.ext.dependencies.rxAndroid
-    implementation rootProject.ext.dependencies.rxjava
-    implementation rootProject.ext.dependencies.adapter_rxjava
-    implementation rootProject.ext.dependencies.rxpermissions
-    implementation rootProject.ext.dependencies.retrofit
-    implementation rootProject.ext.dependencies.converter_gson
-    implementation rootProject.ext.dependencies.converter_scalars
+    implementation rootProject.ext.plugins.dagger
+//    annotationProcessor rootProject.ext.plugins.dagger_compiler
+    kapt  rootProject.ext.plugins.dagger_compiler
+    implementation rootProject.ext.plugins.rxAndroid
+    implementation rootProject.ext.plugins.rxjava
+    implementation rootProject.ext.plugins.adapter_rxjava
+    implementation rootProject.ext.plugins.rxpermissions
+    implementation rootProject.ext.plugins.retrofit
+    implementation rootProject.ext.plugins.converter_gson
+    implementation rootProject.ext.plugins.converter_scalars
     //框架必须依赖  腾讯end
 
     //腾讯IM  start
-    implementation(name: 'tuikit-4.7.10', ext: 'aar')
-    implementation(name: 'imsdk-4.8.10', ext: 'aar')
-    implementation(name: 'alipaySdk-15.7.5-20200422171619', ext: 'aar')//支付宝支付
+    implementation files('libs/tuikit-4.7.10.aar')
+    implementation files('libs/imsdk-4.8.10.aar')
+    implementation files('libs/alipaySdk-15.7.5-20200422171619.aar')
     //腾讯end
 
-    implementation rootProject.ext.dependencies.crashreport
-    implementation rootProject.ext.dependencies.greendao
-    implementation rootProject.ext.dependencies.xpopup
-    implementation rootProject.ext.dependencies.pickerview
-    implementation rootProject.ext.dependencies.appcompat
-    implementation rootProject.ext.dependencies.eventbus
-    implementation rootProject.ext.dependencies.bottombarlayout
-    implementation rootProject.ext.dependencies.immersionbar
-    implementation rootProject.ext.dependencies.components
-    implementation rootProject.ext.dependencies.xxpermissions
-    implementation rootProject.ext.dependencies.baseRecycler
-    implementation rootProject.ext.dependencies.kernel
-    implementation rootProject.ext.dependencies.classics
-    implementation rootProject.ext.dependencies.glide
-    implementation rootProject.ext.dependencies.svgaplayer
-    implementation rootProject.ext.dependencies.tagcloudlib
-    implementation rootProject.ext.dependencies.bingoogolapple
-    implementation rootProject.ext.dependencies.pictureselector
-    implementation rootProject.ext.dependencies.switchbutton
-    implementation rootProject.ext.dependencies.tinypinyin
-    implementation rootProject.ext.dependencies.tinypinyin_v1
-    implementation rootProject.ext.dependencies.tinypinyin_v2
+    implementation rootProject.ext.plugins.crashreport
+    implementation rootProject.ext.plugins.greendao
+    implementation rootProject.ext.plugins.xpopup
+    implementation rootProject.ext.plugins.pickerview
+    implementation rootProject.ext.plugins.appcompat
+    implementation rootProject.ext.plugins.eventbus
+    implementation rootProject.ext.plugins.bottombarlayout
+    implementation rootProject.ext.plugins.immersionbar
+    implementation rootProject.ext.plugins.components
+    implementation rootProject.ext.plugins.xxpermissions
+    implementation rootProject.ext.plugins.baseRecycler
+    implementation rootProject.ext.plugins.kernel
+    implementation rootProject.ext.plugins.classics
+    implementation rootProject.ext.plugins.glide
+    implementation rootProject.ext.plugins.svgaplayer
+    implementation rootProject.ext.plugins.tagcloudlib
+    implementation rootProject.ext.plugins.bingoogolapple
+    implementation rootProject.ext.plugins.pictureselector
+    implementation rootProject.ext.plugins.switchbutton
+    implementation rootProject.ext.plugins.tinypinyin
+    implementation rootProject.ext.plugins.tinypinyin_v1
+    implementation rootProject.ext.plugins.tinypinyin_v2
     implementation project(path: ':hyyTool')
-
-
 }

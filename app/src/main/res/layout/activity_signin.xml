@@ -55,8 +55,8 @@
 
             <ImageView
                 android:id="@+id/iv_v1"
-                android:layout_width="@dimen/dp_15"
-                android:layout_height="@dimen/dp_15"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_36"
                 android:src="@mipmap/login_name" />
@@ -87,16 +87,17 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_33"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_10">
 
             <ImageView
                 android:id="@+id/iv_v2"
-                android:layout_width="@dimen/dp_15"
-                android:layout_height="@dimen/dp_19"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_36"
                 android:src="@mipmap/login_password" />
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -104,7 +105,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_v2"
+                android:background="@null"
                 android:orientation="vertical"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
                 app:hintEnabled="false"
                 app:passwordToggleEnabled="true">
 
@@ -114,7 +118,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp_8"
                     android:layout_marginRight="@dimen/dp_36"
-                    android:background="@null"
+                    android:background="@android:color/transparent"
                     android:hint="请输输入密码"
                     android:imeOptions="actionGo"
                     android:inputType="textPassword"
@@ -122,13 +126,7 @@
                     android:textColorHint="#FFF"
                     android:textSize="@dimen/sp_12" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:background="#EEEEEE" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
@@ -143,13 +141,13 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_33"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_10">
 
             <ImageView
                 android:id="@+id/iv_v3"
-                android:layout_width="@dimen/dp_15"
-                android:layout_height="@dimen/dp_19"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_36"
                 android:src="@mipmap/login_password" />
@@ -160,7 +158,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_v3"
+                android:background="@null"
                 android:orientation="vertical"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
                 app:hintEnabled="false"
                 app:passwordToggleEnabled="true">
 
@@ -170,7 +171,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp_8"
                     android:layout_marginRight="@dimen/dp_36"
-                    android:background="@null"
+                    android:background="@android:color/transparent"
                     android:hint="请再次输入密码"
                     android:imeOptions="actionGo"
                     android:inputType="textPassword"
@@ -178,13 +179,7 @@
                     android:textColorHint="#FFF"
                     android:textSize="@dimen/sp_12" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:background="#EEEEEE" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>

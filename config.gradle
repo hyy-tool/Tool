@@ -1,9 +1,8 @@
 ext {
     android = [
-            compileSdkVersion: 29,
-            buildToolsVersion: "29.0.2",
-            minSdkVersion    : 21,
-            targetSdkVersion : 29,
+            compileSdkVersion: 32,
+            minSdk    : 24,
+            targetSdk : 32,
             versionCode      : 1,
             versionName      : "0.0.1",
 
@@ -11,7 +10,7 @@ ext {
     dependVersion = [
             support: "25.3.1"
     ]
-    dependencies = [
+    plugins = [
             cardview         : "com.android.support:cardview-v7:${dependVersion.support}",//cardview
 
             dagger           : "com.google.dagger:dagger:2.22.1",
@@ -27,7 +26,7 @@ ext {
             rxkit            : "com.github.tamsiree.RxTool:RxKit:2.6.2",//1基础工具库
             rxui             : "com.github.tamsiree.RxTool:RxUI:2.6.2",//2UI库
 
-            bottombarlayout  : "com.github.chaychan:BottomBarLayout:1.2.0",//底部导航
+            bottombarlayout  : "com.github.chaychan:BottomBarLayout:2.0.2",//底部导航
 
             immersionbar     : "com.gyf.immersionbar:immersionbar:3.0.0",//沉浸式基础依赖 1
             components       : "com.gyf.immersionbar:immersionbar-components:3.0.0",//沉浸式fragmennt快速集成 2
@@ -60,7 +59,7 @@ ext {
 
             greendao         : "org.greenrobot:greendao:3.3.0", //GreenDao-v4
 
-            design           : "com.android.support:design:25.3.1",//登录密码小眼睛
+            design           : "com.android.support:design:28.0.0",//登录密码小眼睛
 
             eventbus         : "org.greenrobot:eventbus:3.2.0",//eventbus
 
@@ -68,7 +67,7 @@ ext {
 
             mpandroidchart   : "com.github.PhilJay:MPAndroidChart:v3.1.0",//饼图,柱形图
 
-            xpopup           : "com.github.li-xiaojun:XPopup:2.7.6",//Popwindow弹框 显示流畅细腻
+            xpopup           : "com.github.li-xiaojun:XPopup:2.8.0",//Popwindow弹框 显示流畅细腻
 
             xxpermissions    : "com.hjq:xxpermissions:6.5",//权限请求框架
 

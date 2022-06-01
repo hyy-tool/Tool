@@ -28,7 +28,7 @@ allprojects {
 ```gradle
 dependencies {
   
- implementation 'com.github.hyy-tool:HYYTool:v1.0.3'
+
   
 }
 ```

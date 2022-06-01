@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ToolGather</string>
-
     // "+"menu相关
     <string name="add_friend">添加好友</string>
     <string name="add_group">添加群聊</string>
@@ -38,7 +37,7 @@
     <string name="home_permissions">跳转到权限设置界面</string>
     <string name="home_regular">正则判断</string>
     <string name="home_function">功能演示</string>
-//底部导航
+    //底部导航
     <string name="main_home_page">首页</string>
     <string name="main_commonly">常用</string>
     <string name="main_pay_im">支付.IM</string>

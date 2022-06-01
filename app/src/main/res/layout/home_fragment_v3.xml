@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/iten_base" />
+    <include
+        android:id="@+id/title_base"
+        layout="@layout/title_base" />
 
     <TextView
         android:id="@+id/tv_ali_pay"
