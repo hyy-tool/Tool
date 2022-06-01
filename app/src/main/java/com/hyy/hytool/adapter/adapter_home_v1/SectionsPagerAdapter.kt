@@ -1,4 +1,4 @@
-package com.hyy.hytool.adapter
+package com.hyy.hytool.adapter.adapter_home_v1
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

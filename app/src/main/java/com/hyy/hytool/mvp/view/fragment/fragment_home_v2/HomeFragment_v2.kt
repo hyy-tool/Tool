@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view.fragment
+package com.hyy.hytool.mvp.view.fragment.fragment_home_v2
 
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,7 +9,7 @@ import com.hyy.htool.utils.HyAdapterTool
 import com.hyy.htool.utils.HySpTool
 import com.hyy.htool.utils.HyToast
 import com.hyy.hytool.R
-import com.hyy.hytool.adapter.ListAdapter
+import com.hyy.hytool.adapter.adapter_home_v1.ListAdapter
 import com.hyy.hytool.base.BaseFragment
 import com.hyy.hytool.databinding.HomeFragmentV2Binding
 import com.hyy.hytool.mvp.modile.AreaSelectBean

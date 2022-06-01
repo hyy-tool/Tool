@@ -1,4 +1,4 @@
-package com.hyy.hytool.adapter
+package com.hyy.hytool.adapter.adapter_home_v1
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder

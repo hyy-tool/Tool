@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view.fragment
+package com.hyy.hytool.mvp.view.fragment.fragment_home_v1
 
 import android.view.View
 import android.widget.ImageView
@@ -7,13 +7,16 @@ import cn.bingoogolapple.bgabanner.BGALocalImageSize
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.gyf.immersionbar.ImmersionBar
+import com.hjq.permissions.XXPermissions
 import com.hyy.htool.utils.HyAdapterTool
 import com.hyy.htool.utils.HyToast
+import com.hyy.htool.utils.SkipActivity
 import com.hyy.hytool.R
-import com.hyy.hytool.adapter.HomeFragmentAdapter
+import com.hyy.hytool.adapter.adapter_home_v1.HomeFragmentAdapter
 import com.hyy.hytool.base.BaseFragment
 import com.hyy.hytool.databinding.HomeFragmentV1Binding
 import com.hyy.hytool.mvp.modile.EventBusBean
+import com.hyy.hytool.mvp.view.avtivity.actvity_home_v1.*
 import org.greenrobot.eventbus.EventBus
 
 /**
@@ -62,13 +65,13 @@ class HomeFragment_v1 : BaseFragment() {
             if (view.id == R.id.tv_name) {
                 when (position) {
                     0 -> {
-                      //  SkipActivity.startFragmentActivity(SvgaActivity::class.java, false, activity)
+                        SkipActivity.startFragmentActivity(SvgaActivity::class.java, false, activity)
                     }
                     1 -> {
-                       // SkipActivity.startFragmentActivity(ThreeDActivity::class.java, false, activity)
+                        SkipActivity.startFragmentActivity(ThreeDActivity::class.java, false, activity)
                     }
                     2 -> {
-//                        SkipActivity.startFragmentActivity(IoswitchActivity::class.java, false, activity)
+                        SkipActivity.startFragmentActivity(IoswitchActivity::class.java, false, activity)
                     }
                     3 -> {
                         val eventBusBean = EventBusBean()
@@ -77,16 +80,16 @@ class HomeFragment_v1 : BaseFragment() {
                         HyToast.success("已发送聊天界面接收")
                     }
                     4 -> {
-                       // SkipActivity.startFragmentActivity(PhotographActivity::class.java, false, activity)
+                        SkipActivity.startFragmentActivity(PhotographActivity::class.java, false, activity)
                     }
                     5 -> {
-                       // SkipActivity.startFragmentActivity(BankCardActivity::class.java, false, activity)
+                        SkipActivity.startFragmentActivity(BankCardActivity::class.java, false, activity)
                     }
                     6 -> {
-                        //XXPermissions.startPermissionActivity(activity)
+                        XXPermissions.startPermissionActivity(activity)
                     }
                     7 -> {//正则判断
-                      //  SkipActivity.startFragmentActivity(RegularJudgmentActivity::class.java, false, activity)
+                        SkipActivity.startFragmentActivity(RegularJudgmentActivity::class.java, false, activity)
                     }
                 }
             }

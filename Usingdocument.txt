@@ -15,7 +15,5 @@
 15.获取手机信息例如屏幕宽高 HyDeviceTool
 16.设置状态栏相关  HyBarTool
 17.BaseQuickAdapter  SmartRefreshLayout搭配使用的Adapter   HyAdapterTool
-18.支付宝支付 在您调用支付宝的地方调用 AliPayEntry alipayentry = AliPayEntry.getInstance()
-19.微信支付  在您的baseActivity添加 HyConstTool.INSTANCE.setWEIXIN_APP_ID("您的APPID");
-20.activity跳转,finish()动画展示   使用前必须在BaseApplication注册 HyConstTool.ANIMATION = "RIGHT_GET_IN_AND_OUT";
+18.activity跳转,finish()动画展示   使用前必须在BaseApplication注册 HyConstTool.ANIMATION = "RIGHT_GET_IN_AND_OUT";
   使用方法  SkipActivity.startFragmentActivity(XXXXX::class.java, false,activity)

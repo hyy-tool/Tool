@@ -1,6 +1,6 @@
-[![](https://jitpack.io/v/hyy-tool/HYYTool.svg)](https://jitpack.io/#hyy-tool/HYYTool)
+[![](https://jitpack.io/v/hyy-tool/Tool.svg)](https://jitpack.io/#hyy-tool/Tool)
 
-# [HYYTool](https://github.com/hyy-tool/HYYTool)
+# [HYYTool](https://github.com/hyy-tool/Tool)
 
 >个人使用工具类集合
 
@@ -27,7 +27,7 @@ allprojects {
 
 ```gradle
 dependencies {
-  
+   implementation 'com.github.hyy-tool:Tool:0.0.3'
 
   
 }
@@ -42,7 +42,7 @@ HyTool.init(this);
 
 # API使用文档
 
--  [点我看文档](https://github.com/hyy-tool/HYYTool/wiki)
+-  [点我看文档](https://github.com/hyy-tool/Tool/wiki)
 
 
 

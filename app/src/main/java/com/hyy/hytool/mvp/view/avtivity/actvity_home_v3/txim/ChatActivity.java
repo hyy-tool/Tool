@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hyy.hytool.R;
-import com.hyy.hytool.mvp.view.SplashActivity;
+import com.hyy.hytool.mvp.view.avtivity.SplashActivity;
 import com.hyy.hytool.util.Constants;
 import com.hyy.hytool.util.SoftHideKeyBoardUtil;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;

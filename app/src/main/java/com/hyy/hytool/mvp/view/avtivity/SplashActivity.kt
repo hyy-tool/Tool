@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view
+package com.hyy.hytool.mvp.view.avtivity
 
 import android.content.Intent
 import android.view.View

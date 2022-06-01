@@ -89,4 +89,7 @@ dependencies {
     implementation rootProject.ext.plugins.tinypinyin
     implementation rootProject.ext.plugins.tinypinyin_v1
     implementation rootProject.ext.plugins.tinypinyin_v2
+    implementation rootProject.ext.plugins.xxpermissions
+    implementation rootProject.ext.plugins.xpopup
+    implementation rootProject.ext.plugins.pickerview
 }

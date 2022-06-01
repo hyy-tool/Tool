@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hyy.hytool.R;
-import com.hyy.hytool.adapter.NewFriendListAdapter;
+import com.hyy.hytool.adapter.adapter_home_v1.NewFriendListAdapter;
 import com.hyy.hytool.util.DemoLog;
 import com.tencent.imsdk.TIMFriendshipManager;
 import com.tencent.imsdk.TIMValueCallBack;

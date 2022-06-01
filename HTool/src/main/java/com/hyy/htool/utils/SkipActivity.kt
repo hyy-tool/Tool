@@ -22,16 +22,16 @@ object SkipActivity {
         activity.startActivity(intent)
         when (HyConstTool.ANIMATION) {
             "ZOOM_OUT" -> {
-                activity?.overridePendingTransition(R.anim.skip_amplification_one, R.anim.skip_amplification_two)
+                activity.overridePendingTransition(R.anim.skip_amplification_one, R.anim.skip_amplification_two)
             }
             "STAGGERED_AND_DOWN" -> {
-                activity?.overridePendingTransition(R.anim.skip_staggered_and_down_one, R.anim.skip_staggered_and_down_two)
+                activity.overridePendingTransition(R.anim.skip_staggered_and_down_one, R.anim.skip_staggered_and_down_two)
             }
             "RIGHT_GET_IN_AND_OUT" -> {
-                activity?.overridePendingTransition(R.anim.skip_right_enter_one, R.anim.skip_right_enter_two)
+                activity.overridePendingTransition(R.anim.skip_right_enter_one, R.anim.skip_right_enter_two)
             }
             "SKIP_NARROW" -> {
-                activity?.overridePendingTransition(R.anim.skip_narrow_one, R.anim.skip_narrow_two)
+                activity.overridePendingTransition(R.anim.skip_narrow_one, R.anim.skip_narrow_two)
             }
         }
         if(isFinish) {

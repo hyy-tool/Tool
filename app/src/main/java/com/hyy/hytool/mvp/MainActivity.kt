@@ -1,14 +1,19 @@
 package com.hyy.hytool.mvp
 
+import android.Manifest
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.hyy.hytool.adapter.SectionsPagerAdapter
+import com.hyy.htool.utils.HyLocationTool.isLocationEnabled
+import com.hyy.htool.utils.HyNetTool.isGpsEnabled
+import com.hyy.htool.utils.HyNetTool.isNetworkAvailable
+import com.hyy.htool.utils.HyPermissionsTool
+import com.hyy.hytool.adapter.adapter_home_v1.SectionsPagerAdapter
 import com.hyy.hytool.base.BaseActivity
 import com.hyy.hytool.databinding.ActivityMainBinding
-import com.hyy.hytool.mvp.view.fragment.HomeFragment_v1
-import com.hyy.hytool.mvp.view.fragment.HomeFragment_v2
-import com.hyy.hytool.mvp.view.fragment.HomeFragment_v3
-import com.hyy.hytool.mvp.view.fragment.HomeFragment_v4
+import com.hyy.hytool.mvp.view.fragment.fragment_home_v1.HomeFragment_v1
+import com.hyy.hytool.mvp.view.fragment.fragment_home_v2.HomeFragment_v2
+import com.hyy.hytool.mvp.view.fragment.fragment_home_v3.HomeFragment_v3
+import com.hyy.hytool.mvp.view.fragment.fragment_home_v4.HomeFragment_v4
 
 class MainActivity : BaseActivity() {
 
@@ -26,6 +31,19 @@ class MainActivity : BaseActivity() {
         asd.forEach {
             println(it)
         }
+
+        //权限管理
+        val isNetworkAvailable = isNetworkAvailable(this) //判断网络连接是否可用
+        val isGpsEnabled = isGpsEnabled(this) //GPS是否打开
+        val isLocationEnabled = isLocationEnabled(this) //判断定位是否可用
+
+        //TODO 权限获取
+        HyPermissionsTool.with(this)
+            .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) //相机权限
+            .addPermission(Manifest.permission.ACCESS_COARSE_LOCATION) //网络定位权限
+            .addPermission(Manifest.permission.ACCESS_FINE_LOCATION) //GPS定位权限
+            .initPermission()
+
 
         val v1 = HomeFragment_v1()
         val v2 = HomeFragment_v2()

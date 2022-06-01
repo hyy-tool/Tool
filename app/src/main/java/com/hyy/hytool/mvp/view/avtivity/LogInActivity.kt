@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view
+package com.hyy.hytool.mvp.view.avtivity
 
 import android.view.View
 import com.hyy.htool.utils.HySpTool.getBoolean
