@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#6200EE</color>
+
+    <color name="tab_gb">#ffffff</color>
+    <color name="tab_normal_color">#333333</color>
+    <color name="tab_selected_color">#333333</color>
+    <color name="immersionbar_color">#62B6FE</color>
+    <color name="bottom_b">#282828</color>
+    <color name="c_fbc700">#62B6FE</color>
+    <color name="e5e5e5">#e5e5e5</color>
+    <color name="ffdbecf9">#ffdbecf9</color>
+
+    <color name="shape1">#5d8df7</color>
+    <color name="shape2">#5EB9F8</color>
+    <color name="shape3">#5CC2F8</color>
+    <color name="F40736">#F40736</color>
+    <color name="app_color_f6">#f6f6f6</color>
+    <color name="lv">#88F40A</color>
+    <color name="huang">#F4B906</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+
+</resources>

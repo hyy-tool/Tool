@@ -1,0 +1,21 @@
+
+1.使用前必须在BaseApplication注册 HyTool.init(this);
+2.切换语言工具使用方法 HyLanguageService.changeLanguage(HyTool.getContext(), LanguageType.LANGUAGE_ZH_CN)
+3.文件File操作工具 HyFileTool
+4.关于字符串操作工具 HyDataTool
+5.正则判断  HyJudgeTool
+6.Toast显示工具  HyToast
+7.储存工具   HySpTool
+8.相机相册操作工具  HyPhotoTool
+9.权限操作工具 HyPermissionsTool
+10. 判断当前网络使用状态前提是您已经开启 ACCESS_NETWORK_STATE权限 HyNetTool
+11. 等待 HyLoading
+13.加密工具  HyEncryptTool
+14.编码解码工具  HyEncodeTool (Base64编码,md2,url)
+15.获取手机信息例如屏幕宽高 HyDeviceTool
+16.设置状态栏相关  HyBarTool
+17.BaseQuickAdapter  SmartRefreshLayout搭配使用的Adapter   HyAdapterTool
+18.支付宝支付 在您调用支付宝的地方调用 AliPayEntry alipayentry = AliPayEntry.getInstance()
+19.微信支付  在您的baseActivity添加 HyConstTool.INSTANCE.setWEIXIN_APP_ID("您的APPID");
+20.activity跳转,finish()动画展示   使用前必须在BaseApplication注册 HyConstTool.ANIMATION = "RIGHT_GET_IN_AND_OUT";
+  使用方法  SkipActivity.startFragmentActivity(XXXXX::class.java, false,activity)

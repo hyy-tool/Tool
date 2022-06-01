@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">ToolGather</string>
+
+    // "+"menu相关
+    <string name="add_friend">添加好友</string>
+    <string name="add_group">添加群聊</string>
+    <string name="start_conversation">发起会话</string>
+    <string name="create_group_chat">创建群聊</string>
+    <string name="create_chat_room">创建聊天室</string>
+    <string name="create_private_group">创建讨论组</string>
+    <string name="hint_add_user_id">请输入ID</string>
+    <string name="hint_add_wording">请输入验证消息</string>
+    <string name="contact_add">添加</string>
+    <string name="user_id">对方ID</string>
+    <string name="add_wording">验证消息</string>
+    <string name="chat_top">置顶聊天</string>
+    <string name="chat_delete">删除聊天</string>
+    <string name="no_friend_apply">暂无好友申请</string>
+    // 新朋友
+    <string name="request_agree">同意</string>
+    <string name="request_accepted">已接受</string>
+    <string name="request_waiting">等待验证</string>
+    <string name="langusge">语言切换</string>
+    <string name="timeSelection">时间选择</string>
+    <string name="citySelection">城市选择</string>
+    <string name="regular_test">测试</string>
+    <string name="regular_phone">请输入手机号</string>
+    <string name="regular_formatting_phone">格式化手机号</string>
+
+
+    //首页
+    <string name="home_svga">svga动态图片展示</string>
+    <string name="home_3d_ball">3D球形特效</string>
+    <string name="home_ios_switch">仿ios开关</string>
+    <string name="home_eventbus">EVENTBUS</string>
+    <string name="home_pictures_pics">照片选择</string>
+    <string name="home_bank_card">银行卡效果</string>
+    <string name="home_permissions">跳转到权限设置界面</string>
+    <string name="home_regular">正则判断</string>
+    <string name="home_function">功能演示</string>
+//底部导航
+    <string name="main_home_page">首页</string>
+    <string name="main_commonly">常用</string>
+    <string name="main_pay_im">支付.IM</string>
+    <string name="main_my">我的</string>
+
+</resources>

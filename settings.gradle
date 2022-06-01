@@ -1,0 +1,3 @@
+include ':app'
+include ':hyyTool'
+rootProject.name = "ToolGather"

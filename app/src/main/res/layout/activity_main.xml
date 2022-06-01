@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.chaychan.library.BottomBarLayout
+        android:id="@+id/bb_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_gravity="center"
+        android:background="#FFF"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/home_default"
+            app:iconSelected="@mipmap/home"
+            app:itemMarginTop="@dimen/dp_5"
+            app:itemText="@string/main_home_page"
+            app:itemTextSize="@dimen/dp_8"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color" />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/talent_default"
+            app:iconSelected="@mipmap/talent"
+            app:itemMarginTop="@dimen/dp_5"
+            app:itemText="@string/main_commonly"
+            app:itemTextSize="@dimen/dp_8"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color" />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/training_default"
+            app:iconSelected="@mipmap/training"
+            app:itemMarginTop="@dimen/dp_5"
+            app:itemText="@string/main_pay_im"
+            app:itemTextSize="@dimen/dp_8"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color" />
+
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/mine_default"
+            app:iconSelected="@mipmap/mine"
+            app:itemMarginTop="@dimen/dp_5"
+            app:itemText="@string/main_my"
+            app:itemTextSize="@dimen/dp_8"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color" />
+
+    </com.chaychan.library.BottomBarLayout>
+
+</LinearLayout>
