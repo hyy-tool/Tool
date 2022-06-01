@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hytool">
+    package="com.hyy.hytool">
     <!--网络权限-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
     <application
         android:name=".ToolGatherApp"
@@ -16,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HYTool">
 
+
         <!--适配华为（huawei）刘海屏-->
         <meta-data
             android:name="android.notch_support"
@@ -25,8 +27,9 @@
             android:name="notch.config"
             android:value="portrait|landscape" />
 
+
         <activity
-            android:name="com.example.toolgather.mvp.view.activity.SplashActivity"
+            android:name=".mvp.view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,31 +38,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.toolgather.mvp.view.MainActivity"
+            android:name=".mvp.MainActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan|adjustNothing" />
 
-        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.SvgaActivity" />
-        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.ThreeDActivity" />
-        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.IoswitchActivity" />
-        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.ChatActivity" />
-        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.TxImAnswerActivity" />
-        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.ContactAvtivity" />
-        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.FriendProfileActivity" />
-        <activity android:name=".total_directory.mvp.view.activity.activity_home_v3.txIm.NewFriendActivity" />
-        <activity android:name="com.example.toolgather.mvp.view.activity.LogInActivity" />
-        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.SignInActivity" />
-        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.PhotographActivity" />
-        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.BankCardActivity" />
-        <activity android:name="com.example.toolgather.mvp.view.activity.activity_home_v1.RegularJudgmentActivity" />
+        <activity android:name=".mvp.view.LogInActivity" />
+        <activity android:name=".mvp.view.avtivity.actvity_home_v1.SignInActivity" />
+        <activity android:name=".mvp.view.avtivity.actvity_home_v3.txim.ContactAvtivity" />
+        <activity android:name=".mvp.view.avtivity.actvity_home_v3.txim.FriendProfileActivity" />
+        <activity android:name=".mvp.view.avtivity.actvity_home_v3.txim.ChatActivity" />
 
-        <!-- 微信支付 start-->
-        <activity
-            android:name="com.example.hyytool.wxapi.WXPayEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-
+        
     </application>
 
 </manifest>

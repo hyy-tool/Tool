@@ -2,12 +2,9 @@
 apply from: "config.gradle"
 
 buildscript {
-    ext.kotlin_version = "1.5.30"//kotlin  开发2
 
+    ext.kotlin_version = "1.5.30"//kotlin  开发2
     repositories {
-        flatDir {//阿里支付依赖
-            dirs 'libs'
-        }
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }

@@ -31,7 +31,7 @@ ext {
             immersionbar     : "com.gyf.immersionbar:immersionbar:3.0.0",//沉浸式基础依赖 1
             components       : "com.gyf.immersionbar:immersionbar-components:3.0.0",//沉浸式fragmennt快速集成 2
 
-            glide            : "com.github.bumptech.glide:glide:4.11.0",//图片加载库
+            glide            : "com.github.bumptech.glide:glide:4.12.0",//图片加载库
 
             appcompat        : "androidx.appcompat:appcompat:1.0.0",  //必须 1.0.0 以上 1
             kernel           : "com.scwang.smart:refresh-layout-kernel:2.0.1",  //核心必须依赖 2
@@ -53,7 +53,7 @@ ext {
             tinypinyin_v1    : "com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3",// 可选，适用于Android的中国地区词典
             tinypinyin_v2    : "com.github.promeg:tinypinyin-lexicons-java-cncity:2.0.3", // 可选，适用于Java的中国地区词典
 
-            bingoogolapple   : "cn.bingoogolapple:bga-banner:3.0.0@aar", // Splash动画
+            banner   : "cn.bingoogolapple:bga-banner:3.0.0@aar", // Splash动画
 
             roundedimageview : "com.makeramen:roundedimageview:2.3.0", //圆角图片圆形图片
 
