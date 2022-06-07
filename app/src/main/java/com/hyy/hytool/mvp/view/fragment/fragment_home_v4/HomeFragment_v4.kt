@@ -3,6 +3,7 @@ package com.hyy.hytool.mvp.view.fragment.fragment_home_v4
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.view.View
 import com.bigkoo.pickerview.builder.TimePickerBuilder
 import com.bigkoo.pickerview.listener.OnTimeSelectListener
@@ -94,9 +95,22 @@ class HomeFragment_v4 : BaseFragment(), View.OnClickListener {
                         binding.tvTime.text = date.toString()
                     }
                 })
-                    .setType(booleanArrayOf(true, true, true, false, false, false))//分别对应年月日时分秒，默认全部显示
+                    .setType(booleanArrayOf(true, true, true, true, true, true))//分别对应年月日时分秒，默认全部显示
                     .setTitleText("选择时间")//标题文字
-                    .setOutSideCancelable(false)//点击屏幕，点在控件外部范围时，是否取消显示
+                    .setOutSideCancelable(true)//点击屏幕，点在控件外部范围时，是否取消显示
+                    .isAlphaGradient(true)
+                    .setCancelText("取消")//取消按钮文字
+                    .setSubmitText("确认")//确认按钮文字
+                    .setTitleSize(20)//标题文字大小
+                    .setTitleText("选择时间")//标题文字
+                    .isCyclic(false)//是否循环滚动
+                    .setTitleColor(Color.BLACK)//标题文字颜色
+                    .setSubmitColor(Color.BLUE)//确定按钮文字颜色
+                    .setCancelColor(Color.BLUE)//取消按钮文字颜色
+//                    .setTitleBgColor(0xFF666666.toInt())//标题背景颜色 Night mode
+//                    .setBgColor(0xFF333333.toInt())//滚轮背景颜色 Night mode
+                    .setLabel("年","月","日","时","分","秒")
+                    .isDialog(false)//是否显示为对话框样式
                     .build()
                 pvTime.show()
 

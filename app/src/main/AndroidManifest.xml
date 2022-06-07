@@ -29,7 +29,7 @@
 
 
         <activity
-            android:name=".mvp.view.avtivity.SplashActivity"
+            android:name=".mvp.view.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,15 +42,17 @@
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan|adjustNothing" />
 
-        <activity android:name=".mvp.view.avtivity.LogInActivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v1.SignInActivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v3.txim.ContactAvtivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v3.txim.FriendProfileActivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v3.txim.ChatActivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v1.SvgaActivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v1.ThreeDActivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v1.IoswitchActivity" />
-        <activity android:name=".mvp.view.avtivity.actvity_home_v1.PhotographActivity" />
+        <activity android:name=".mvp.view.activity.LogInActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v1.SignInActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v3.txim.ContactAvtivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v3.txim.FriendProfileActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v3.txim.ChatActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v1.SvgaActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v1.ThreeDActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v1.IoswitchActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v1.PhotographActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v1.BankCardActivity" />
+        <activity android:name=".mvp.view.activity.activity_home_v1.RegularJudgmentActivity" />
 
     </application>
 

@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view.avtivity.actvity_home_v3.txim;
+package com.hyy.hytool.mvp.view.activity.activity_home_v3.txim;
 
 import android.os.Bundle;
 import android.text.TextUtils;

@@ -28,7 +28,7 @@ object HyConstTool {
      */
 
     @JvmField
-    var ANIMATION = ""
+    var ANIMATION = "RIGHT_GET_IN_AND_OUT"
 
 
     /**

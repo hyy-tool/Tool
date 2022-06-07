@@ -70,7 +70,7 @@ public class ToolGatherApp extends Application {
         /**
          * 设置activity跳转动画
          */
-        HyConstTool.ANIMATION = "SKIP_NARROW";
+        HyConstTool.ANIMATION = "STAGGERED_AND_DOWN";
         HyConstTool.WEIXIN_APP_ID = "";
 
 

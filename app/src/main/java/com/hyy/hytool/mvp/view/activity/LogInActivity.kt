@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view.avtivity
+package com.hyy.hytool.mvp.view.activity
 
 import android.view.View
 import com.hyy.htool.utils.HySpTool.getBoolean
@@ -9,7 +9,7 @@ import com.hyy.hytool.R
 import com.hyy.hytool.base.BaseActivity
 import com.hyy.hytool.databinding.ActivityLoginBinding
 import com.hyy.hytool.mvp.MainActivity
-import com.hyy.hytool.mvp.view.avtivity.actvity_home_v1.SignInActivity
+import com.hyy.hytool.mvp.view.activity.activity_home_v1.SignInActivity
 import com.hyy.hytool.util.LogInGreenDao
 
 /**

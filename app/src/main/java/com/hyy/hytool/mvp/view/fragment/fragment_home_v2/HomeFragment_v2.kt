@@ -24,7 +24,7 @@ import org.greenrobot.eventbus.ThreadMode
  * 时间:      2022/05/2022/5/31
  * 软件包名:   com.hyy.hytool.mvp.view.fragment
  */
-class HomeFragment_v2 :BaseFragment(), View.OnClickListener {
+class HomeFragment_v2 : BaseFragment(), View.OnClickListener {
 
     var student1: EventBusBean? = null
     private var register = true
@@ -34,7 +34,7 @@ class HomeFragment_v2 :BaseFragment(), View.OnClickListener {
 
 
     override fun getLayoutId(): View {
-        binding= HomeFragmentV2Binding.inflate(layoutInflater)
+        binding = HomeFragmentV2Binding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -43,7 +43,6 @@ class HomeFragment_v2 :BaseFragment(), View.OnClickListener {
     }
 
     override fun success(vararg o: Any?) {
-        ShowLoading(false)
         when (o[0] as Int) {
             1 -> {
                 val appfollowlist: AreaSelectBean = o[1] as AreaSelectBean
@@ -59,20 +58,19 @@ class HomeFragment_v2 :BaseFragment(), View.OnClickListener {
 
     override fun error(vararg o: Any?) {
         HyToast.error(o.toString())
-        ShowLoading(false)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     fun receiveStudentEventBus(student: EventBusBean?) {
         student1 = student
+        if (student1 != null) {
+            HyToast.success(student1?.name.toString())
+        }
     }
 
     override fun loadData() {
         super.loadData()
-        if (student1 != null) {
-            HyToast.success(student1?.name.toString())
-        }
-        ShowLoading(true)
+
         binding.titleBase.ivBack.visibility = View.GONE
         binding.ivIcon.setOnClickListener(this@HomeFragment_v2)
         if (register) { //判断evrntbus是否注册
@@ -94,8 +92,6 @@ class HomeFragment_v2 :BaseFragment(), View.OnClickListener {
         binding.rvLiebao.adapter = mAdapter
         binding.rvLiebao.layoutManager = LinearLayoutManager(context)
     }
-
-
 
 
     override fun onClick(v: View?) {

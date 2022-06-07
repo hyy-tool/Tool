@@ -21,21 +21,18 @@ import javax.inject.Inject
  */
 abstract class BaseFragment : Fragment(), BaseView {
     private var mRootView: View? = null
-    private val isDataInitiated = false
 
     //Fragment的View加载完毕的标记
     private var isViewCreated = false
 
     //Fragment对用户可见的标记
     private var isUIVisible = false
-//    private var mPopupView: BasePopupView? = null
 
     @set:Inject//java 混合开发不支持私有注入 必须加上 set:
     var mHome_v2Present: Home_v2Present? = null
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//        mRootView = inflater.inflate(getLayoutId(), container, false)
         return getLayoutId()
 
     }
@@ -49,16 +46,7 @@ abstract class BaseFragment : Fragment(), BaseView {
         lazyLoad()
     }
 
-    fun ShowLoading(isShow: Boolean) {
-//        if (isShow) {
-//            mPopupView =
-//                XPopup.Builder(activity).dismissOnBackPressed(false).dismissOnTouchOutside(false).asLoading("正在加载中")
-//                    .show()
-//        } else {
-//            mPopupView!!.dismiss()
-//            mPopupView!!.delayDismiss(300) //延时消失，有时候消失过快体验可能不好，可以延时一下
-//        }
-    }
+
 
     fun initListener() {}
     fun initDatas() {}

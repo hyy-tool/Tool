@@ -1,12 +1,15 @@
 package com.hyy.hytool.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.gyf.immersionbar.ImmersionBar
+import com.hyy.htool.language.HyLanguageService
 import com.hyy.hytool.R
 import com.hyy.hytool.dagger.component.DaggerCommonActivityComponent
 import com.hyy.hytool.dagger.noudle.CommonActivityModule
+import org.greenrobot.eventbus.EventBus
 
 /**
  * @Author : HYY
@@ -57,5 +60,20 @@ abstract class BaseActivity : AppCompatActivity(),BaseView {
     protected open fun initImmersionBar() {
         //设置共同沉浸式样式
         ImmersionBar.with(this).navigationBarColor(R.color.colorPrimary).init()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        //移除粘性事件
+        EventBus.getDefault().removeAllStickyEvents()
+        //注销注册
+        EventBus.getDefault().unregister(this)
+    }
+
+    override fun attachBaseContext(base: Context) {
+        //系统语言等设置发生改变时会调用此方法，需要要重置app语言
+        var conlanguage = HyLanguageService.changeContextLocale(base)
+        super.attachBaseContext(conlanguage)
+
     }
 }

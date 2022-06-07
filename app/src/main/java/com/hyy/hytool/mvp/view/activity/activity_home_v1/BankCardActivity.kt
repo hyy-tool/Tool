@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view.avtivity.actvity_home_v1
+package com.hyy.hytool.mvp.view.activity.activity_home_v1
 
 import android.view.View
 import com.bumptech.glide.Glide
@@ -10,7 +10,6 @@ import com.hyy.hytool.R
 import com.hyy.hytool.adapter.adapter_home_v1.AdapterStackTest
 import com.hyy.hytool.base.BaseActivity
 import com.hyy.hytool.databinding.ActivityBankCarBinding
-import com.hyy.hytool.mvp.view.avtivity.actvity_home_v1.BankCardActivity.Companion.TEST_DATAS
 import com.stefan.hyyTool.interfaces.OnSimpleListener
 
 /**

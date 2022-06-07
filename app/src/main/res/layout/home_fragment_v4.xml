@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
 
-    <include android:id="@+id/title_base" layout="@layout/title_base" />
+    <include
+        android:id="@+id/title_base"
+        layout="@layout/title_base" />
 
     <ImageView
         android:id="@+id/iv"
@@ -23,12 +24,11 @@
         android:layout_marginRight="@dimen/dp_50"
         android:background="@drawable/shape_rectangle_with_radius"
         android:gravity="center"
-        android:textColor="#000"
-        android:text="@string/citySelection" />
+        android:text="@string/citySelection"
+        android:textColor="#000" />
 
     <TextView
         android:id="@+id/tv_time"
-        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_35"
         android:layout_marginLeft="@dimen/dp_50"
@@ -36,10 +36,11 @@
         android:layout_marginRight="@dimen/dp_50"
         android:background="@drawable/shape_rectangle_with_radius"
         android:gravity="center"
-        android:text="@string/timeSelection" />
+        android:text="@string/timeSelection"
+        android:textColor="#000" />
+
     <TextView
         android:id="@+id/tv_language"
-        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_35"
         android:layout_marginLeft="@dimen/dp_50"
@@ -47,5 +48,6 @@
         android:layout_marginRight="@dimen/dp_50"
         android:background="@drawable/shape_rectangle_with_radius"
         android:gravity="center"
-        android:text="@string/langusge" />
+        android:text="@string/langusge"
+        android:textColor="#000" />
 </LinearLayout>

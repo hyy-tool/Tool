@@ -16,7 +16,7 @@ import com.hyy.hytool.adapter.adapter_home_v1.HomeFragmentAdapter
 import com.hyy.hytool.base.BaseFragment
 import com.hyy.hytool.databinding.HomeFragmentV1Binding
 import com.hyy.hytool.mvp.modile.EventBusBean
-import com.hyy.hytool.mvp.view.avtivity.actvity_home_v1.*
+import com.hyy.hytool.mvp.view.activity.activity_home_v1.*
 import org.greenrobot.eventbus.EventBus
 
 /**
@@ -77,7 +77,7 @@ class HomeFragment_v1 : BaseFragment() {
                         val eventBusBean = EventBusBean()
                         eventBusBean.name = "我是发送的事件"
                         EventBus.getDefault().postSticky(eventBusBean)
-                        HyToast.success("已发送聊天界面接收")
+                        HyToast.success("已发送常用界面接收")
                     }
                     4 -> {
                         SkipActivity.startFragmentActivity(PhotographActivity::class.java, false, activity)

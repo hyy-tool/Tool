@@ -1,4 +1,4 @@
-package com.hyy.hytool.mvp.view.avtivity.actvity_home_v1
+package com.hyy.hytool.mvp.view.activity.activity_home_v1
 
 import android.view.View
 import com.hyy.htool.utils.HyDataTool

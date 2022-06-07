@@ -8,8 +8,8 @@ import com.hyy.hytool.R
 import com.hyy.hytool.base.BaseFragment
 import com.hyy.hytool.databinding.HomeFragmentV3Binding
 import com.hyy.hytool.mvp.modile.WxPayBean
-import com.hyy.hytool.mvp.view.avtivity.actvity_home_v3.txim.ContactAvtivity
-import com.hyy.hytool.mvp.view.avtivity.actvity_home_v3.txim.TxImAnswerActivity
+import com.hyy.hytool.mvp.view.activity.activity_home_v3.txim.ContactAvtivity
+import com.hyy.hytool.mvp.view.activity.activity_home_v3.txim.TxImAnswerActivity
 import com.hyy.hytool.pay.AliPayEntry
 import com.hyy.hytool.pay.PayEntry
 import com.hyy.hytool.pay.WeixinPayEntry
@@ -82,7 +82,6 @@ class HomeFragment_v3 : BaseFragment(), View.OnClickListener, PayEntry.OnPayList
 
             }
             R.id.tv_tx_im -> {
-                ShowLoading(true)
                 val loginUser = TIMManager.getInstance().loginUser //判断用户是否登录
                 //int sdkappid = GenerateTestUserSig.SDKAPPID;//用户的User
                 val userSig = GenerateTestUserSig.genTestUserSig("1400384334") //后台生成的
@@ -109,7 +108,6 @@ class HomeFragment_v3 : BaseFragment(), View.OnClickListener, PayEntry.OnPayList
 
                                 override fun onSuccess() {
                                     HyToast.success("首次登陆成功")
-                                    ShowLoading(false)
                                     //                                            startActivity(TxImAnswerActivity.class, false);
                                     SkipActivity.startFragmentActivity(ContactAvtivity::class.java, false, activity)
                                 }
@@ -117,7 +115,6 @@ class HomeFragment_v3 : BaseFragment(), View.OnClickListener, PayEntry.OnPayList
                         }
                     })
                 } else {
-                    ShowLoading(false)
                     HyToast.success("登陆成功跳转到会话列表")
                     SkipActivity.startFragmentActivity(TxImAnswerActivity::class.java, false, activity)
                 }

@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.hyy.htool.HyTool;
 import com.hyy.hytool.R;
-import com.hyy.hytool.mvp.view.avtivity.actvity_home_v3.txim.FriendProfileActivity;
+import com.hyy.hytool.mvp.view.activity.activity_home_v3.txim.FriendProfileActivity;
 import com.hyy.hytool.util.DemoLog;
 import com.tencent.imsdk.TIMFriendshipManager;
 import com.tencent.imsdk.TIMValueCallBack;
