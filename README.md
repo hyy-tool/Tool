@@ -42,7 +42,7 @@ HyTool.init(this);
 
 # API使用文档
 
--  [点我看文档](https://github.com/hyy-tool/Tool/wiki)
+-  [点我看文档](https://github.com/hyy-tool/Tool/wiki/Tool)
 
 
 
