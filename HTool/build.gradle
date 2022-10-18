@@ -70,7 +70,8 @@ dependencies {
     implementation rootProject.ext.plugins.classics
     implementation rootProject.ext.plugins.xpopup
     implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
-//    implementation files('libs/alipaySdk-15.7.5-20200422171619.aar')
     implementation rootProject.ext.plugins.wechat
     implementation rootProject.ext.plugins.anko
+
+    api 'org.aspectj:aspectjrt:1.9.9.1'
 }

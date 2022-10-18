@@ -1,11 +1,14 @@
 package com.hyy.htool.utils
 
+import android.graphics.Bitmap
 import android.os.Build
 import android.text.Html
+import android.text.TextUtils
 import android.util.Base64
-import java.io.UnsupportedEncodingException
+import java.io.*
 import java.net.URLDecoder
 import java.net.URLEncoder
+
 
 /**
  * @Author : HYY
@@ -14,15 +17,74 @@ import java.net.URLEncoder
  * 软件包名:   com.hyy.htool.utils
  */
 object HyEncodeTool {
+
+
     /**
-     * URL编码
+     * 保存图片到本地
      *
-     * 若系统不支持指定的编码字符集,则直接将input原样返回
-     *
-     * @param input   要编码的字符
-     * @param charset 字符集
-     * @return 编码为字符集的字符串
+     * @param context
+     * @param url
+     * @param bitmap
      */
+
+    fun saveBitmapToFile(filePath: String?, bitmapName: String?, bitmap: Bitmap): String? {
+        var outputStream: FileOutputStream? = null
+        try {
+            val file = File(filePath, bitmapName)
+            if (file.exists()) {
+                file.createNewFile()
+            }
+            outputStream = FileOutputStream(file)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
+            outputStream.flush();
+            outputStream.close();
+            return file.absolutePath
+        } catch (e: IOException) {
+            e.printStackTrace()
+            return null
+        }
+    }
+
+
+    /**
+     * 图片转Base64
+     * @param path
+     * @return Base64
+     */
+    fun imageToBase64(path: String): String? {
+        if (TextUtils.isEmpty(path)) {
+            return null
+        }
+        var `is`: InputStream? = null
+        var data: ByteArray? = null
+        var result: String? = null
+        try {
+            `is` = FileInputStream(path)
+            //创建一个字符流大小的数组。
+            data = ByteArray(`is`.available())
+            //写入数组
+            `is`.read(data)
+            //Log.i("Base64tool1", "" + is.toString());
+
+            //用默认的编码格式进行编码
+            result = Base64.encodeToString(data, Base64.DEFAULT)
+            //Log.i("Base64tool1", " " + result.toString());
+        } catch (e: IOException) {
+            e.printStackTrace()
+        } finally {
+            if (null != `is`) {
+                try {
+                    `is`.close()
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+            }
+        }
+        return result
+
+    }
+
+
     /**
      * URL编码
      *

@@ -12,6 +12,13 @@ import java.util.List;
  * 软件包名:   com.hyy.htool.utils
  */
 public class HyAdapterTool {
+    /**
+     * 必须和  com.scwang.smart:refresh-layout-kernel:2.0.1  com.scwang.smart:refresh-header-classics:2.0.1  一起使用
+     * @param isRefresh  是否刷新
+     * @param data   将要展示的数据
+     * @param mRefreshLayout       刷新数据
+     * @param mAdapter  Adapter
+     */
     public static void showList(boolean isRefresh, List data, SmartRefreshLayout mRefreshLayout, BaseQuickAdapter mAdapter) {
         final int size = data == null ? 0 : data.size();
         if (isRefresh) {

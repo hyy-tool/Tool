@@ -45,9 +45,6 @@ object HyPhotoTool {
     fun openCameraImage(activity: Activity) {
         imageUriFromCamera = createImagePathUri(activity)
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        // MediaStore.EXTRA_OUTPUT参数不设置时,系统会自动生成一个uri,但是只会返回一个缩略图
-        // 返回图片在onActivityResult中通过以下代码获取
-        // Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera)
         activity.startActivityForResult(intent, GET_IMAGE_BY_CAMERA)
     }
@@ -59,9 +56,6 @@ object HyPhotoTool {
     fun openCameraImage(fragment: Fragment) {
         imageUriFromCamera = createImagePathUri(fragment.context)
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        // MediaStore.EXTRA_OUTPUT参数不设置时,系统会自动生成一个uri,但是只会返回一个缩略图
-        // 返回图片在onActivityResult中通过以下代码获取
-        // Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera)
         fragment.startActivityForResult(intent, GET_IMAGE_BY_CAMERA)
     }
@@ -96,7 +90,6 @@ object HyPhotoTool {
         val intent = Intent("com.android.camera.action.CROP")
         intent.setDataAndType(srcUri, "image/*")
         intent.putExtra("crop", "true")
-
         ////////////////////////////////////////////////////////////////
         // 1.宽高和比例都不设置时,裁剪框可以自行调整(比例和大小都可以随意调整)
         ////////////////////////////////////////////////////////////////
@@ -108,7 +101,6 @@ object HyPhotoTool {
         //	会以裁剪框的宽为准,按照裁剪宽高比例生成一个图片,该图和框选部分可能不同,
         //  不同的情况可能是截取框选的一部分,也可能超出框选部分,向下延伸补足
         ////////////////////////////////////////////////////////////////
-
         // aspectX aspectY 是裁剪框宽高的比例
         intent.putExtra("aspectX", 1)
         intent.putExtra("aspectY", 1)

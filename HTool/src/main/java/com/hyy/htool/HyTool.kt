@@ -5,7 +5,7 @@ import android.content.Context
 import android.os.CountDownTimer
 import android.os.Handler
 import android.widget.TextView
-import com.stefan.hyyTool.interfaces.OnSimpleListener
+import com.hyy.htool.interfaces.OnSimpleListener
 
 /**
  * @Author : HYY

@@ -13,6 +13,9 @@ buildscript {
         classpath "com.android.tools.build:gradle:7.0.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"//kotlin  开发1  一共四部
         classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0' // GreenDao-v1 一共四步
+
+        classpath 'io.github.wurensen:gradle-android-plugin-aspectjx:3.2.0'
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

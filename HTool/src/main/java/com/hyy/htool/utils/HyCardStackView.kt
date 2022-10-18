@@ -10,10 +10,7 @@ import android.util.Log
 import android.view.*
 import android.widget.OverScroller
 import com.hyy.htool.R
-import com.hyy.htool.view.HyAdapterStack
-import com.hyy.htool.view.HyScrollDelegate
-import com.stefan.hyyTool.Utils.HyImageTool
-import com.stefan.hyyTool.view.*
+import com.hyy.htool.view.*
 import java.util.ArrayList
 
 /**

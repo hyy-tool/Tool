@@ -17,9 +17,9 @@ object SkipActivity {
     /**
      * activity跳转
      */
-    fun startActivity(clazz: Class<*>?, isFinish: Boolean, activity: Activity) {
+    fun startActivity(clazz: Class<*>?, isFinish: Boolean, activity: FragmentActivity) {
         val intent = Intent(activity, clazz)
-        activity.startActivity(intent)
+        activity?.startActivity(intent)
         when (HyConstTool.ANIMATION) {
             "ZOOM_OUT" -> {
                 activity.overridePendingTransition(R.anim.skip_amplification_one, R.anim.skip_amplification_two)
@@ -39,32 +39,7 @@ object SkipActivity {
         }
     }
 
-    /**
-     * fragment跳转
-     */
 
-    fun startFragmentActivity(clazz: Class<*>?, isFinish: Boolean, activity: FragmentActivity?) {
-        val intent = Intent(activity, clazz)
-        activity?.startActivity(intent)
-        when (HyConstTool.ANIMATION) {
-            "ZOOM_OUT" -> {
-                activity?.overridePendingTransition(R.anim.skip_amplification_one, R.anim.skip_amplification_two)
-            }
-            "STAGGERED_AND_DOWN" -> {
-                activity?.overridePendingTransition(R.anim.skip_staggered_and_down_one, R.anim.skip_staggered_and_down_two)
-            }
-            "RIGHT_GET_IN_AND_OUT" -> {
-                activity?.overridePendingTransition(R.anim.skip_right_enter_one, R.anim.skip_right_enter_two)
-            }
-            "SKIP_NARROW" -> {
-                activity?.overridePendingTransition(R.anim.skip_narrow_one, R.anim.skip_narrow_two)
-            }
-        }
-
-        if(isFinish) {
-            activity?.finish()
-        }
-    }
 
     /**
      * 关闭当前 Activity

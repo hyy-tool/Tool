@@ -9,7 +9,9 @@ import com.bumptech.glide.request.RequestOptions
 import com.gyf.immersionbar.ImmersionBar
 import com.hjq.permissions.XXPermissions
 import com.hyy.htool.utils.HyAdapterTool
+import com.hyy.htool.utils.HyPhotoTool
 import com.hyy.htool.utils.HyToast
+import com.hyy.htool.utils.SingleClick
 import com.hyy.htool.utils.SkipActivity
 import com.hyy.hytool.R
 import com.hyy.hytool.adapter.adapter_home_v1.HomeFragmentAdapter
@@ -62,16 +64,17 @@ class HomeFragment_v1 : BaseFragment() {
         // 设置点击事件
         mAdapter!!.addChildClickViewIds(R.id.tv_name)
         mAdapter!!.setOnItemChildClickListener { _, view, position ->
+
             if (view.id == R.id.tv_name) {
                 when (position) {
                     0 -> {
-                        SkipActivity.startFragmentActivity(SvgaActivity::class.java, false, activity)
+                        SkipActivity.startActivity(SvgaActivity::class.java, false, activity!!)
                     }
                     1 -> {
-                        SkipActivity.startFragmentActivity(ThreeDActivity::class.java, false, activity)
+                        SkipActivity.startActivity(ThreeDActivity::class.java, false, activity!!)
                     }
                     2 -> {
-                        SkipActivity.startFragmentActivity(IoswitchActivity::class.java, false, activity)
+                        SkipActivity.startActivity(IoswitchActivity::class.java, false, activity!!)
                     }
                     3 -> {
                         val eventBusBean = EventBusBean()
@@ -80,16 +83,16 @@ class HomeFragment_v1 : BaseFragment() {
                         HyToast.success("已发送常用界面接收")
                     }
                     4 -> {
-                        SkipActivity.startFragmentActivity(PhotographActivity::class.java, false, activity)
+                        SkipActivity.startActivity(PhotographActivity::class.java, false, activity!!)
                     }
                     5 -> {
-                        SkipActivity.startFragmentActivity(BankCardActivity::class.java, false, activity)
+                        SkipActivity.startActivity(BankCardActivity::class.java, false, activity!!)
                     }
                     6 -> {
                         XXPermissions.startPermissionActivity(activity)
                     }
                     7 -> {//正则判断
-                        SkipActivity.startFragmentActivity(RegularJudgmentActivity::class.java, false, activity)
+                        SkipActivity.startActivity(RegularJudgmentActivity::class.java, false, activity!!)
                     }
                 }
             }
@@ -98,8 +101,7 @@ class HomeFragment_v1 : BaseFragment() {
 
     private fun BannerContent() {
         val localImageSize = BGALocalImageSize(720, 1280, 320F, 640F)
-        binding.bannerContent!!.setData(
-            localImageSize, ImageView.ScaleType.CENTER_CROP,
+        binding.bannerContent!!.setData(localImageSize, ImageView.ScaleType.CENTER_CROP,
             R.mipmap.f_1,
             R.mipmap.f_2,
             R.mipmap.f_3,

@@ -11,7 +11,6 @@ import java.text.DecimalFormat
 object HyConstTool {
     /******************** 存储相关常量  */
 
-
     /**
      * 微信注册的APPID
      */

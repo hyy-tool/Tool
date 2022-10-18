@@ -56,10 +56,15 @@
         android:text="图片预览"
         android:textColor="#FFF" />
 
+    <ImageView
+        android:id="@+id/home_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
-        android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
-        android:layout_height="160dp"/>
+        android:layout_height="160dp"
+        android:layout_marginBottom="30dp" />
 
 </LinearLayout>

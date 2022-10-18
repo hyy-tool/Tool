@@ -1,8 +1,11 @@
 package com.hyy.hytool.mvp.view.fragment.fragment_home_v3
 
+import android.app.Activity
 import android.view.View
+import com.hyy.htool.utils.HyPreviewImage
 import com.hyy.htool.utils.HySpTool.getContent
 import com.hyy.htool.utils.HyToast
+import com.hyy.htool.utils.SingleClick
 import com.hyy.htool.utils.SkipActivity
 import com.hyy.hytool.R
 import com.hyy.hytool.base.BaseFragment
@@ -33,6 +36,7 @@ class HomeFragment_v3 : BaseFragment(), View.OnClickListener, PayEntry.OnPayList
     private var mAliPayEntry: AliPayEntry? = null
     private var mWeixinPayEntry: WeixinPayEntry? = null
     private var listImage: MutableList<Int> = ArrayList()
+    private var listImage1: MutableList<String> = ArrayList()
     lateinit var binding: HomeFragmentV3Binding
 
 
@@ -69,6 +73,9 @@ class HomeFragment_v3 : BaseFragment(), View.OnClickListener, PayEntry.OnPayList
         TODO("Not yet implemented")
     }
 
+
+
+    @SingleClick
     override fun onClick(view: View) {
         when (view.id) {
             R.id.tv_ali_pay -> {
@@ -108,20 +115,27 @@ class HomeFragment_v3 : BaseFragment(), View.OnClickListener, PayEntry.OnPayList
 
                                 override fun onSuccess() {
                                     HyToast.success("首次登陆成功")
-                                    //                                            startActivity(TxImAnswerActivity.class, false);
-                                    SkipActivity.startFragmentActivity(ContactAvtivity::class.java, false, activity)
+                                    // startActivity(TxImAnswerActivity.class, false);
+                                    // startActivity(ContactAvtivity.class, false);
+                                    SkipActivity.startActivity(ContactAvtivity::class.java, false, activity!!)
                                 }
                             })
                         }
                     })
                 } else {
                     HyToast.success("登陆成功跳转到会话列表")
-                    SkipActivity.startFragmentActivity(TxImAnswerActivity::class.java, false, activity)
+                    SkipActivity.startActivity(TxImAnswerActivity::class.java, false, activity!!)
                 }
             }
             R.id.tv_image -> {
-                HyToast.showToast("点击了")
-//                ImageShow(activity, 1, listImage as ArrayList<Int>?,pager)
+                listImage1.add("http://112.13.199.14:831/upload/j523845c45675535da103x62a055e4dfbba508.jpg")
+                listImage1.add("http://112.13.199.14:831/upload/c740345c45675535da103i62a055e4e1c45537.jpg")
+                listImage1.add("http://112.13.199.14:831/upload/w548845c45675535da103b62a055e4e7a0f820.jpg")
+                listImage1.add("http://112.13.199.14:831/upload/m3109496e06c13102a825o62a055e5013f5141.jpg")
+                listImage1.add("http://112.13.199.14:831/upload/c7403496e06c13102a825i62a055e502a28537.jpg")
+                listImage1.add("http://112.13.199.14:831/upload/p4760496e06c13102a825n62a055e50f97e179.jpg")
+                listImage1.add("http://112.13.199.14:831/upload/c7403496e06c13102a825i62a055e50e299537.jpg")
+                HyPreviewImage.ImageMore(activity as Activity,binding.homeImage,listImage1)
             }
         }
     }

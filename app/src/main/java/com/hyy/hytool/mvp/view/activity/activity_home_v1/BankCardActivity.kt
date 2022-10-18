@@ -10,7 +10,7 @@ import com.hyy.hytool.R
 import com.hyy.hytool.adapter.adapter_home_v1.AdapterStackTest
 import com.hyy.hytool.base.BaseActivity
 import com.hyy.hytool.databinding.ActivityBankCarBinding
-import com.stefan.hyyTool.interfaces.OnSimpleListener
+import com.hyy.htool.interfaces.OnSimpleListener
 
 /**
  * @Author : HYY

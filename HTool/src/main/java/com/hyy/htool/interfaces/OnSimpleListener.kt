@@ -1,4 +1,4 @@
-package com.stefan.hyyTool.interfaces
+package com.hyy.htool.interfaces
 
 /**
  * @Author : HYY

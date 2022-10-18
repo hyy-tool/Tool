@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'//kotlin  开发3
     id 'kotlin-kapt'
+    id 'io.github.wurensen.android-aspectjx'
 }
 
 android {
@@ -35,7 +36,10 @@ android {
         schemaVersion 1
     }
 }
-
+// AOP 配置
+aspectjx {
+    exclude '*'
+}
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -49,7 +53,6 @@ dependencies {
 
     //框架必须依赖  start
     implementation rootProject.ext.plugins.dagger
-//    annotationProcessor rootProject.ext.plugins.dagger_compiler
     kapt rootProject.ext.plugins.dagger_compiler
     implementation rootProject.ext.plugins.rxAndroid
     implementation rootProject.ext.plugins.rxjava

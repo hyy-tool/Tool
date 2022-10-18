@@ -1,7 +1,6 @@
-package com.stefan.hyyTool.view
+package com.hyy.htool.view
 
 import com.hyy.htool.utils.HyCardStackView
-import com.hyy.htool.view.HyScrollDelegate
 
 
 /**

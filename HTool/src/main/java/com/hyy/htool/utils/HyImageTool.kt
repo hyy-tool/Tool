@@ -1,4 +1,4 @@
-package com.stefan.hyyTool.Utils
+package com.hyy.htool.utils
 
 import android.content.Context
 import android.content.res.Resources
